@@ -4,10 +4,10 @@ ob_start();
 
 $GLOBALS['config'] = array(
 	'sqlsrv' => array(
-		'host' => 'mssql.iproject.icasites.nl',
-		'username' => 'iproject9',
-		'password' => 'K7vEkXXW',
-		'db' => 'iproject9'
+		'host' => '',
+		'username' => '',
+		'password' => '',
+		'db' => ''
 		),
 	'remember' => array(
 		'cookie_name' => 'hash',

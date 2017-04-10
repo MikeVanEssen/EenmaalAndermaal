@@ -1,5 +1,5 @@
 <?php
-include 'includes/header.php'; 
+include 'includes/header.php';
 require_once 'core/init.php';
 
 Session::put('previous_page','index.php');
@@ -48,11 +48,11 @@ if(Input::exists('post')) {
     'alphachars_only' => true
     )
   ));
-  
+
   if($validation->passed()) {
     $gebruiker = new Gebruiker();
     $salt = Hash::salt(32);
-    
+
     try {
     $gebruikersdata = array(
       'gebruikersnaam'  => Input::get('gebruikersnaam'),
@@ -82,7 +82,7 @@ if(Input::exists('post')) {
     <h4>Accountgegevens</h4>
     <form name="accountgegevens-form" method="post">
       <p class="text-danger"><?php require_once 'core/init.php'; if(Session::exists('errors')) {foreach(Session::get('errors') as $error) {echo $error, '<br>';}} Session::delete('errors'); ?></p>
-      <div class="form-group"> 
+      <div class="form-group">
         <label>Emailadres</label>
         <input type="email" class="form-control" name="mailbox" value="<?= Session::get('verified') ?>" readonly><!--Moet read only worden-->
       </div>
